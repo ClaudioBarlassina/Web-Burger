@@ -1,0 +1,652 @@
+/* =================  GOOGLE FONTS ===================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: hsl(34, 100%, 92%);
+}
+
+/* =================  HEADER & NAV ===================*/
+
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 5px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: box-shadow 4s;
+  /* border: 1px solid black; */
+  background-color: bisque;
+  box-shadow: 0 0 20px gray;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav__menu {
+  display: flex;
+  font-family: "Aclonica", sans-serif;
+}
+.nav__logo {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  font-family: "Aclonica", sans-serif;
+  color: hsl(22, 100%, 8%);
+}
+.nav__logo img {
+  width: 20px;
+}
+.nav__logo div {
+  background-color: hsl(45, 99%, 48%);
+  padding: 6px;
+  border-radius: 0.5rem;
+}
+
+.nav-toggle {
+  display: flex;
+  font-size: 1.5rem;
+  color: hsl(22, 100%, 8%);
+  cursor: pointer;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+}
+
+.nav__link {
+  margin: 15px;
+}
+a {
+  text-decoration: none;
+}
+/* ====================================================================== */
+
+/* ====================================================================== */
+.nav__link {
+  position: relative;
+  color: hsl(22, 100%, 8%);
+}
+
+.nav__link::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: hsl(45, 99%, 48%);
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  transition: width 0.3s;
+}
+.nav__link:hover::after {
+  width: 60%;
+}
+
+.nav-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+
+/* ================= HOME ==================== */
+.home-section {
+  /* border: 1px solid black; */
+  padding: 100px;
+}
+.home__container {
+  position: relative;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home__data {
+  width: 40%;
+}
+.home__title {
+  /* animations */
+   animation-name: animation-lateral;
+   animation-timing-function: ease-in-out;
+   animation-duration: 2s;
+
+  /* Propiedades */
+  font-size: 60px;
+  font-family: "Aclonica", sans-serif;
+  color: hsl(22, 100%, 8%);
+  max-width: 450px;
+}
+.home__data p {
+  /* animations */
+  animation-name: animation-arriba;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  
+/* Property */
+  width: 300px;
+  height: 200px;
+  font-size: 25px;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  min-width: 300px;
+}
+.home--images {
+  /* property */
+  display: flex;
+  flex-direction: column;
+}
+.image-burger1 {
+   /* animations */
+  animation: animation-abajo 2s ease-in-out, flotar 5s ease-in-out infinite;
+   /* Property */
+  width: 450px;
+  height: auto;
+}
+.image-table { 
+  /* animation */
+   animation: animation-arriba 2s ease-in-out ;
+  /* Property */
+  width: 450px;
+  height: auto;
+}
+.home__data a {
+  display: flex;
+  margin-top: 20px;
+  background-color: hsl(45, 99%, 48%);
+  font-family: "Aclonica", sans-serif;
+  width: 110px;
+  padding: 15px;
+  justify-content: center;
+  border-radius: 15px;
+}
+/* ====================== HOME 2 ============================= */
+
+.home2-section {
+ 
+}
+.home2-title {
+  /* border: 1px solid black; */
+  margin: 2px;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Aclonica", sans-serif;
+}
+.home2-data {
+ 
+  /* animation*/
+  view-timeline-name: --vista; 
+  view-timeline-axis: bloque;  
+  /* Bloque = "horizontal" inline= " vertical" */
+
+  animation-timeline: --vista; 
+  /* animation-name: scroll; */
+  /* asigno la animacion que creamos */
+  animation-range: entry 25% cover 30%;  
+  /* rango de cuando "entry" enpieza y "cover " termina  */
+  animation-fill-mode: both;
+  /* para que la animacion lo haga para atras y adelante */
+
+
+
+  /* border: 1px solid black; */
+  margin: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.image-Burger {
+  /* border: 1px solid black; */
+  margin: 2px;
+}
+.content-info {
+  /* border: 1px solid black; */
+  margin: 2px;
+  width: 30%;
+}
+.cont-data {
+  position: relative;
+  /* border: 1px solid black; */
+  margin: 2px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cont-data-r {
+  position: relative;
+  margin: 2px;
+  height: 150px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+.img-recipe {
+  width: 100px;
+}
+.cont-img {
+  display: flex;
+  background-color: hsl(45, 99%, 48%);
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 30px;
+  border: 3px solid white;
+}
+.content {
+  width: 150px;
+  font-family: "Aclonica", sans-serif;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 10px;
+}
+.content p {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+/* ========================== HOME 3 ================================ */
+
+.container3-primary {
+  /* border:1px solid black; */
+  
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding: 45px;
+}
+.home3-title {
+  /* titulo Principal */
+  /* border: 1px solid black; */
+  margin: 3px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "Aclonica", sans-serif;
+  font-size: 50px;
+}
+.home3-data {
+  /* Contenedor */
+  /* border: 1px solid black; */
+  margin: 3px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  padding: 45px;
+}
+.home3-items {
+  /* Items */
+  border: 3px solid white;
+  background-color: hsl(45, 99%, 48%);
+  border-radius: 30px;
+
+  display: flex;
+  flex-direction: column;
+  margin: 35px;
+  width: 200px;
+  height: 250px;
+  justify-content: center;
+  align-items: center;
+}
+.img3-items {
+  /* imagen */
+
+  position: relative;
+  margin: 3px;
+  width: 150px;
+  height: 150px;
+  top: -55px;
+  filter: drop-shadow(0 0 10px);
+}
+
+.home3-data-item {
+  /* contenedor item */
+  /* border: 1px solid black; */
+  position: relative;
+  margin: 3px;
+  display: flex;
+  flex-direction: row;
+  top: -30px;
+}
+.bloque1 {
+  /* bloque datos */
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 3px;
+  width: 100px;
+  height: 70px;
+  position: relative;
+  font-family: "Aclonica", sans-serif;
+}
+.bloque1-title-secundary {
+  font-size: 15px;
+}
+.bloque1-import {
+  font-size: 25px;
+  justify-items: end;
+  text-align: start;
+}
+
+.bloque2 {
+  /* Bloque icono */
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  margin: 3px;
+  justify-content: end;
+}
+.ico {
+  width: 40px;
+  height: 40px;
+}
+
+/* ======================================= HOME4 ================================= */
+
+.home4-container {
+  /* contenedor principal */
+  /* border: 1px solid black; */
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home4-data {
+  /* contenedor datos */
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 10px;
+  width: 310px;
+}
+.home4-title {
+  /* titulo principal */
+  /* border: 1px solid black; */
+  margin: 1px;
+  font-size: 45px;
+  font-family: "Aclonica", sans-serif;
+}
+.home4-parrafo {
+  /* parrafo principal */
+  /* border: 1px solid black; */
+  margin: 1px;
+  font-family: "Montserrat", sans-serif;
+  width: 300px;
+  height: 75px;
+}
+.home4-button {
+  /* button */
+  border: 3px solid rgb(250, 246, 246);
+  margin: 1px;
+  width: 130px;
+  height: 45px;
+  background-color: hsl(45, 99%, 48%);
+  color: hsl(22, 100%, 8%);
+  font-family: "Aclonica", sans-serif;
+  padding: 5px;
+  border-radius: 25px;
+}
+.home4-image {
+  /* contenedor imagen */
+  /* border: 1px solid black; */
+  margin: 1px;
+}
+.home4-img {
+  /* imagen */
+  /* border: 1px solid black; */
+  margin: 1px;
+  width: 450px;
+}
+/*================================ HOME 5 =======================*/
+.home5-container-primary {
+  /* contenedor principal */
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: 45px;
+  border-radius: 25px;
+  background-color: hsl(22, 100%, 8%);
+  
+}
+.home5-container-title {
+  /* contenedor titulo */
+
+  margin: 20px;
+}
+.home5-container2{
+
+}
+.home5-title {
+  /* titulo principal */
+
+  font-size: 30px;
+  text-align: center;
+  color: aliceblue;
+  font-family: "Aclonica", sans-serif;
+}
+.home5-container2 {
+  /* contenedor datos */
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.home5-img {
+  /* imagen */
+  width: 300px;
+  height: 300px;
+}
+
+.container-datos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+}
+.cont-icon{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  background-color: tomato;
+}
+.container-datos p {
+  color: aliceblue;
+  font-family: "Montserrat", sans-serif;
+}
+
+.title-secundary {
+  color: aliceblue;
+  font-size: 20px;
+  font-family: "Aclonica", sans-serif;
+}
+
+.conteiner-one {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.conteiner-two {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.conteiner-three {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+/* ================================ RESPONSIVE ======================= */
+
+@media screen and (max-width: 950px) {
+  .nav__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    justify-content: center;
+    background-color: hsl(34, 100%, 92%);
+    width: 100%;
+    padding-block: 4.5rem 3.5rem;
+    box-shadow: 0 4px 16px hsla(22, 100%, 8%, 0.2);
+    transition: top 0.4s;
+  }
+  .nav__list {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    z-index: -1;
+  }
+  .home__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-items: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    /* min-width: 600px; */
+  }
+  .home__data {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+  }
+  .home__title {
+    /* min-width: 450px; */
+  }
+  .home__data_p {
+    width: 250px;
+    height: 200px;
+    text-align: center;
+    position: relative;
+    min-width: 300px;
+  }
+  /* HOME 2 */
+  .image-Burger {
+    width: 40%;
+  }
+  .content-info {
+    width: 60%;
+  }
+
+  /* HOME 3 */
+  /* titulo Principal */
+  .home3-title {
+    width: 70%;
+    text-align: center;
+  }
+  /* Contenedor titulo */
+  .home3-content-title {
+    display: flex;
+    justify-content: center;
+  }
+  /* CONTENEDOR */
+  .home3-data {
+    grid-template-columns: repeat(2, 250px);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  /* HOME 4 */
+  .home4-container {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* =================== animations ============================ */
+
+@keyframes animation-lateral {
+  0%{
+   transform: translateX(-70px);
+   opacity: 0;
+  }
+  100%{
+    transform: translateX(0px);
+    opacity: 100%;
+  }
+}
+
+@keyframes animation-arriba {
+  0%{
+   transform: translateY(70px);
+   opacity: 0;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+@keyframes animation-abajo {
+  0%{
+   transform: translateY(-70px);
+   opacity: 0;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 100%;
+   
+  }
+}
+
+@keyframes flotar {
+  0% {
+    transform: translateY(40px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY( 40px);
+    
+  }
+}
+
+@keyframes scroll {
+  0%{
+    opacity: 0;
+    scale: 25%;
+  }
+  100%{
+    opacity: 1;
+    scale: 100%;
+   
+  }
+}
