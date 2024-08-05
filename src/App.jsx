@@ -11,7 +11,7 @@ import Home5 from "./Components/home5";
 function App() {
 
   return (
-    <>
+    <div>
       <Header/>
       <Home />
       <Home2 />
@@ -20,7 +20,7 @@ function App() {
       <Home5/>
       
       
-    </>
+    </div>
   )
 }
 
