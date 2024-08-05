@@ -513,7 +513,7 @@ a {
 
 @media screen and (max-width: 950px) {
   *{
-    max-width: 600px;
+    max-width: 600wh;
   }
   .nav__menu {
     position: fixed;
