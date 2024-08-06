@@ -9,11 +9,10 @@
 }
 
 body {
-  width: min-content;
+  /* width: min-content; */
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  background-color: hsl(34, 100%, 92%);
+   background-color: hsl(34, 100%, 92%);
   
   
 }
@@ -28,7 +27,7 @@ body {
   left: 0;
   z-index: 1;
   transition: box-shadow 4s;
-  /* border: 1px solid black; */
+
   background-color: bisque;
   box-shadow: 0 0 20px gray;
 }
@@ -518,7 +517,9 @@ a {
 /* ================================ RESPONSIVE ======================= */
 
 @media screen and (width < 800px) {
- 
+ body{
+  width: min-content;
+ }
   .nav__menu {
     position: fixed;
     display: flex;
