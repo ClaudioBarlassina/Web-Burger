@@ -8,7 +8,7 @@ import sauses from "../assets/recipe-sauces.png"
 
 const home2 = () => {
   return (
-    <div className="home2-section">
+    <div className="home2-section" id="Recipe">
       <div>
         <h1 className="home2-title">Our Secret Recipe</h1>
       </div>

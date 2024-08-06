@@ -15,27 +15,27 @@ function header() {
           <div className="nav__menu">
             <ul className="nav__list">
               <li>
-                <a href="#" className="nav__link">
+                <a href="#Home" className="nav__link">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="nav__link">
+                <a href="#Recipe" className="nav__link">
                   Recipe
                 </a>
               </li>
               <li>
-                <a href="#" className="nav__link">
+                <a href="#Popular" className="nav__link">
                   Popular
                 </a>
               </li>
               <li>
-                <a href="#" className="nav__link">
+                <a href="#Delivery" className="nav__link">
                   Delivery
                 </a>
               </li>
               <li>
-                <a href="#" className="nav__link">
+                <a href="#Contact" className="nav__link">
                   Contact
                 </a>
               </li>

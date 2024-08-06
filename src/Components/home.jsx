@@ -5,7 +5,7 @@ import Table from "../assets/home-dish.png"
 const home = () => {
   return (
     <div>
-      <section className="home-section" id="home">
+      <section className="home-section" id="Home">
         <div className="home__container">
           <div className="home__data">
             <h1 className="home__title">Love Every  Burger</h1>

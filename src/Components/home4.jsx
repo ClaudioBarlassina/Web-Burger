@@ -3,7 +3,7 @@ import image from "../assets/delivery-burger.png"
 
 function home4() {
   return (
-    <div className="home4-container">
+    <div className="home4-container" id="Delivery">
       <div className="home4-data">
         <h3 className="home4-title">Fast Delivery</h3>
         <p className="home4-parrafo">

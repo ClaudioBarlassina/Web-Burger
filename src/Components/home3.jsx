@@ -7,7 +7,7 @@ import burger5 from "../assets/popular-burger-classic.png"
 import ico from "../assets/quitar.png"
 function home3() {
   return (
-    <div className="container3-primary">
+    <div className="container3-primary" id="Popular">
       <div className="home3-content-title">
         <h1 className="home3-title">Most Devoured Burgers</h1>
       </div>

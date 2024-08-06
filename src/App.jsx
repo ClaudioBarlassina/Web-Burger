@@ -18,7 +18,7 @@ function App() {
       <Home3 />
       <Home4 />
       <Home5/>
-      
+      <div className='boton-auto'>Boton</div>
       
     </div>
   )
