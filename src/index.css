@@ -515,15 +515,15 @@ a {
 
 /* ================================ RESPONSIVE ======================= */
 
-@media screen and (max-width: 950px) {
- 
+@media screen and (width < 800px) {
+   
   .nav__menu {
     position: fixed;
     top: -100%;
     left: 0;
     justify-content: center;
     background-color: hsl(34, 100%, 92%);
-    width: 100%;
+    width: 800px;
     padding-block: 4.5rem 3.5rem;
     box-shadow: 0 4px 16px hsla(22, 100%, 8%, 0.2);
     transition: top 0.4s;
@@ -571,7 +571,8 @@ a {
   }
   .home2-title{
    
-    
+    text-align: center;
+
    
     
   }
