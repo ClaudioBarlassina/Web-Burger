@@ -12,9 +12,7 @@ body {
   /* width: min-content; */
   display: flex;
   flex-direction: column;
-   background-color: hsl(34, 100%, 92%);
-  
-  
+  background-color: hsl(34, 100%, 92%);
 }
 
 /* =================  HEADER & NAV ===================*/
@@ -57,10 +55,16 @@ body {
 }
 
 .nav-toggle {
-  display: flex;
+  /* display: flex;
   font-size: 1.5rem;
   color: hsl(22, 100%, 8%);
-  cursor: pointer;
+  cursor: pointer; */
+
+    display: none;
+  
+}
+.nav-close{
+  display: none;
 }
 
 .nav__list {
@@ -97,9 +101,9 @@ a {
 }
 
 .nav-close {
-  position: absolute;
+  /* position: absolute;
   top: 1rem;
-  right: 1.5rem;
+  right: 1.5rem; */
 }
 
 /* ================= HOME ==================== */
@@ -119,9 +123,9 @@ a {
 }
 .home__title {
   /* animations */
-   animation-name: animation-lateral;
-   animation-timing-function: ease-in-out;
-   animation-duration: 2s;
+  animation-name: animation-lateral;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
 
   /* Propiedades */
   font-size: 60px;
@@ -134,8 +138,8 @@ a {
   animation-name: animation-arriba;
   animation-timing-function: ease-in-out;
   animation-duration: 2s;
-  
-/* Property */
+
+  /* Property */
   width: 300px;
   height: 200px;
   font-size: 25px;
@@ -149,15 +153,15 @@ a {
   flex-direction: column;
 }
 .image-burger1 {
-   /* animations */
+  /* animations */
   animation: animation-abajo 2s ease-in-out, flotar 5s ease-in-out infinite;
-   /* Property */
+  /* Property */
   width: 450px;
   height: auto;
 }
-.image-table { 
+.image-table {
   /* animation */
-   animation: animation-arriba 2s ease-in-out ;
+  animation: animation-arriba 2s ease-in-out;
   /* Property */
   width: 450px;
   height: auto;
@@ -175,7 +179,6 @@ a {
 /* ====================== HOME 2 ============================= */
 
 .home2-section {
- 
 }
 .home2-title {
   /* border: 1px solid black; */
@@ -185,21 +188,18 @@ a {
   font-family: "Aclonica", sans-serif;
 }
 .home2-data {
- 
   /* animation*/
-  view-timeline-name: --vista; 
-  view-timeline-axis: bloque;  
+  view-timeline-name: --vista;
+  view-timeline-axis: bloque;
   /* Bloque = "horizontal" inline= " vertical" */
 
-  animation-timeline: --vista; 
+  animation-timeline: --vista;
   /* animation-name: scroll; */
   /* asigno la animacion que creamos */
-  animation-range: entry 25% cover 30%;  
+  animation-range: entry 25% cover 30%;
   /* rango de cuando "entry" enpieza y "cover " termina  */
   animation-fill-mode: both;
   /* para que la animacion lo haga para atras y adelante */
-
-
 
   /* border: 1px solid black; */
   margin: 2px;
@@ -210,7 +210,6 @@ a {
 .image-Burger {
   /* border: 1px solid black; */
   margin: 2px;
-  
 }
 .content-info {
   /* border: 1px solid black; */
@@ -269,7 +268,7 @@ a {
 
 .container3-primary {
   /* border:1px solid black; */
-  
+
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -433,15 +432,13 @@ a {
   margin: 45px;
   border-radius: 25px;
   background-color: hsl(22, 100%, 8%);
-  
 }
 .home5-container-title {
   /* contenedor titulo */
 
   margin: 20px;
 }
-.home5-container2{
-
+.home5-container2 {
 }
 .home5-title {
   /* titulo principal */
@@ -469,7 +466,7 @@ a {
   grid-template-rows: 1fr 1fr;
   gap: 15px;
 }
-.cont-icon{
+.cont-icon {
   display: flex;
   flex-direction: row;
   gap: 15px;
@@ -517,29 +514,74 @@ a {
 /* ================================ RESPONSIVE ======================= */
 
 @media screen and (width < 800px) {
- body{
-  width: min-content;
- }
-  .nav__menu {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    top: -100%;
-    left: 0;
-    justify-content: center;
-    background-color: hsl(34, 100%, 92%);
-    width: 800px;
-    padding-block: 4.5rem 3.5rem;
-    box-shadow: 0 4px 16px hsla(22, 100%, 8%, 0.2);
-    transition: top 0.4s;
+  body {
+    width: min-content;
+
   }
-  .nav__list {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    row-gap: 2rem;
-    z-index: -1;
-  }
+.header{
+  /* border: 1px solid black;
+  margin: 1px; */
+}
+.nav-container{
+  /* border: 3px solid rgb(48, 8, 189); */
+  margin: 1px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+ 
+}
+.nav__menu{
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* border: 3px solid rgb(170, 19, 19); */
+  margin: 15px;
+  height: 300px;
+  width: 100%;
+  transition:1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+  
+}
+.nav__menu.show{
+  display: flex;
+ transform: translatey(-300px);
+ opacity: 0;
+  /* background-color: blueviolet; */
+  height: 0;
+ 
+
+
+
+}
+.nav__list{
+  /* border: 1px solid rgb(17, 196, 32); */
+  margin: 1px;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  gap:50px;
+ 
+  
+}
+.nav-close{
+  display: flex;
+  /* border: 1px solid black; */
+  margin: 15px;
+}
+.nav-toggle{
+  /* border: 1px solid black; */
+  margin: 1px;
+  display: flex;
+}
+
+  
+  
+
+
+
+
+  
   .home__container {
     display: flex;
     flex-direction: column;
@@ -568,18 +610,13 @@ a {
     min-width: 300px;
   }
   /* HOME 2 */
-  .image-Burger{
- position: absolute;
- height: 700px;
- opacity: 0.5;
-    
+  .image-Burger {
+    position: absolute;
+    height: 700px;
+    opacity: 0.5;
   }
-  .home2-title{
-   
+  .home2-title {
     text-align: center;
-
-   
-    
   }
   .content-info {
     width: 60%;
@@ -613,63 +650,58 @@ a {
   }
   /* HOME 5 */
 
-  .home5-container-primary{
+  .home5-container-primary {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 550px;
   }
 
-  .home5-container2{
+  .home5-container2 {
     display: flex;
     flex-direction: column-reverse;
     justify-items: center;
     align-items: center;
-   
   }
-  .container-datos{
+  .container-datos {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-
 }
-
-
 
 /* =================== animations ============================ */
 
 @keyframes animation-lateral {
-  0%{
-   transform: translateX(-70px);
-   opacity: 0;
+  0% {
+    transform: translateX(-70px);
+    opacity: 0;
   }
-  100%{
+  100% {
     transform: translateX(0px);
     opacity: 100%;
   }
 }
 
 @keyframes animation-arriba {
-  0%{
-   transform: translateY(70px);
-   opacity: 0;
+  0% {
+    transform: translateY(70px);
+    opacity: 0;
   }
-  100%{
+  100% {
     transform: translateY(0px);
     opacity: 100%;
   }
 }
 @keyframes animation-abajo {
-  0%{
-   transform: translateY(-70px);
-   opacity: 0;
+  0% {
+    transform: translateY(-70px);
+    opacity: 0;
   }
-  100%{
+  100% {
     transform: translateY(0px);
     opacity: 100%;
-   
   }
 }
 
@@ -681,29 +713,26 @@ a {
     transform: translateY(-10px);
   }
   100% {
-    transform: translateY( 40px);
-    
+    transform: translateY(40px);
   }
 }
 
 @keyframes scroll {
-  0%{
+  0% {
     opacity: 0;
     scale: 25%;
   }
-  100%{
+  100% {
     opacity: 1;
     scale: 100%;
-   
   }
 }
-.boton-auto{
+.boton-auto {
   width: 100px;
   height: 100px;
   border: 1px solid black;
   position: fixed;
   top: 900px;
-  
-  right: auto;
 
+  right: auto;
 }

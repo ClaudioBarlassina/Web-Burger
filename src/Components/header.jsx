@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../assets/logo-burger.svg";
 
 function header() {
+  const [MenuVisible, setMenuVisible] = useState(false);
+  const menu = () => {
+    setMenuVisible(!MenuVisible);
+ }
+
+
+
   return (
     <div>
       <section className="header">
@@ -12,8 +19,9 @@ function header() {
             </div>
             Burger
           </a>
-          <div className="nav__menu">
-            <ul className="nav__list">
+          <div className={`nav__menu ${MenuVisible && "show" }`}  >
+         
+            <ul className="nav__list" >       
               <li>
                 <a href="#Home" className="nav__link">
                   Home
@@ -40,13 +48,13 @@ function header() {
                 </a>
               </li>
             </ul>
-            <div className="nav-close">
+           {/* <div className="nav-close" onClick={menu}>
               <i className="ri-close-large-fill"></i>
-            </div>
+            </div>  */}
           </div>
-            <div className="nav-toggle">
-              <i className="ri-apps-2-fill"></i>
-            </div>
+             <div className="nav-toggle" onClick={menu}>
+               <i className="ri-apps-2-fill"></i>
+               </div>
         </nav>
       </section>
     </div>
