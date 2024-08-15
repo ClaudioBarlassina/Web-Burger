@@ -181,6 +181,10 @@ a {
 .home2-section {
 }
 .home2-title {
+  /* animation */
+  animation-name: animation-abajo;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
   /* border: 1px solid black; */
   margin: 2px;
   text-align: center;
@@ -192,7 +196,7 @@ a {
   view-timeline-name: --vista;
   view-timeline-axis: bloque;
   /* Bloque = "horizontal" inline= " vertical" */
-
+  animation-name: ;
   animation-timeline: --vista;
   /* animation-name: scroll; */
   /* asigno la animacion que creamos */
@@ -208,7 +212,8 @@ a {
   justify-content: center;
 }
 .image-Burger {
-  /* border: 1px solid black; */
+
+
   margin: 2px;
 }
 .content-info {
@@ -527,7 +532,8 @@ a {
   margin: 1px;
   display: flex;
   flex-direction: row;
-  align-items: start;
+  align-items: flex-start;
+  justify-content: center;
  
 }
 .nav__menu{
@@ -539,14 +545,14 @@ a {
   margin: 15px;
   height: 300px;
   width: 100%;
-  transition:1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition:2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   
   
 }
 .nav__menu.show{
   display: flex;
- transform: translatey(-300px);
- opacity: 0;
+ transform: translatey(-350px);
+ /* opacity: 0; */
   /* background-color: blueviolet; */
   height: 0;
  
@@ -560,8 +566,8 @@ a {
   display: flex;
   flex-direction: column;
   margin: 15px;
-  gap:50px;
- 
+  gap:30px;
+ font-size: 25px;
   
 }
 .nav-close{
@@ -570,18 +576,15 @@ a {
   margin: 15px;
 }
 .nav-toggle{
-  /* border: 1px solid black; */
-  margin: 1px;
+ 
+  margin: 15px;
   display: flex;
+  
+}
+.ri-apps-2-fill{
+ font-size: 25px;
 }
 
-  
-  
-
-
-
-
-  
   .home__container {
     display: flex;
     flex-direction: column;

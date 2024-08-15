@@ -3,10 +3,15 @@ import logo from "../assets/logo-burger.svg";
 
 function header() {
   const [MenuVisible, setMenuVisible] = useState(false);
+  
+  
   const menu = () => {
     setMenuVisible(!MenuVisible);
  }
 
+  const closeMenu = () => {
+  setMenuVisible(false)
+  } 
 
 
   return (
@@ -21,29 +26,30 @@ function header() {
           </a>
           <div className={`nav__menu ${MenuVisible && "show" }`}  >
          
-            <ul className="nav__list" >       
+            <ul className="nav__list" > 
+                    
               <li>
-                <a href="#Home" className="nav__link">
+                <a href="#Home" className="nav__link" >
                   Home
                 </a>
               </li>
               <li>
-                <a href="#Recipe" className="nav__link">
+                <a href="#Recipe" className="nav__link"  onClick={closeMenu}>
                   Recipe
                 </a>
               </li>
               <li>
-                <a href="#Popular" className="nav__link">
+                <a href="#Popular" className="nav__link"  onClick={closeMenu}>
                   Popular
                 </a>
               </li>
               <li>
-                <a href="#Delivery" className="nav__link">
+                <a href="#Delivery" className="nav__link"  onClick={closeMenu}>
                   Delivery
                 </a>
               </li>
               <li>
-                <a href="#Contact" className="nav__link">
+                <a href="#Contact" className="nav__link"  onClick={closeMenu}>
                   Contact
                 </a>
               </li>
